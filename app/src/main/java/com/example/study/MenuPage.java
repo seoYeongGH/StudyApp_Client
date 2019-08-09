@@ -41,13 +41,11 @@ public class MenuPage extends AppCompatActivity {
     }
 
     public void setTxtLogout(View view){
-        Log.d("LOGOUT","START");
         TextView txtLogout = findViewById(R.id.txtLogout);
         txtLogout.setText(Html.fromHtml("<u>logout</u>"));
 
         txtLogout.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                Log.d("LOGOUT","CLICKED");
                 doLogout();
             }
         });
@@ -64,7 +62,6 @@ public class MenuPage extends AppCompatActivity {
     }
 
     private void doLogout(){
-        Log.d("LOGOUT","RETRO");
         Retrofit retrofit = RetroController.getInstance().getRetrofit();
         UserService userService = retrofit.create(UserService.class);
 
