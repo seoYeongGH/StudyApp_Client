@@ -112,7 +112,7 @@ public class LoginPage extends AppCompatActivity {
             case OK:
                 Session session = Session.getInstance();
                 session.setId(inputId);
-                Toast toast = Toast.makeText(this,"로그인이 완료되었습니다.",Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(this,"로그인이 완료되었습니다.",Toast.LENGTH_SHORT);
                 toast.show();
 
                 Intent intent = new Intent(this,MenuPage.class);
