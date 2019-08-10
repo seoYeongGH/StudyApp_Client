@@ -27,7 +27,7 @@ public class RetroController {
     }
 
     public void buildService(){
-        String baseUrl = "http://10.0.2.2:8080"; //AVD: 10.0.2.2 IP: 192.168.0.6
+        String baseUrl = "http://10.0.2.2:8080"; //AVD: 10.0.2.2 IP
 
         synchronized (RetroController.class){
             Gson gson = new GsonBuilder()
