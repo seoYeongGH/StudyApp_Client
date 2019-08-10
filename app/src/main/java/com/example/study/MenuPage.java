@@ -33,6 +33,9 @@ public class MenuPage extends AppCompatActivity {
         setIdView();
     }
 
+    public void onBackPressed(){
+        BackButton.getInstance().onBtnPressed(getApplicationContext(),this);
+    }
     private void setIdView(){
         Session session = Session.getInstance();
         TextView idView = findViewById(R.id.idView);

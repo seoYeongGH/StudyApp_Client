@@ -14,6 +14,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+
+        BackButton.getInstance().onBtnPressed(getApplicationContext(),this);
+    }
+
     public void onBtnLoginClicked(View view){
         Intent intent = new Intent(this, LoginPage.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
